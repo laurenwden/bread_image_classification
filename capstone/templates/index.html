@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container justify-content-center">
+    <div class="booth">
+        <h3>Take A Photo of Your Bread!</h3>
+            <video id="video" width="400" height="300"></video>
+                <a href="#" id="capture" class="booth-capture-button">Take Photo</a>
+                <canvas id="canvas" width="400" height="300"></canvas>
+                   <img name = "image" id = "image" src="http://placekitten.com/g/400/300" alt="image">
+        <form id="capture" method="POST" action="{{url_for('predict') }}" enctype="multipart/form-data">
+                <input type="submit" value="Check Quality" name="submit" class="booth-capture-button"> 
+        </form>      
+    </div>
+
+    <h5>Upload File</h5>
+    <form id="upload-form" method="POST" action="{{url_for('upload') }}" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="file" name="inputFile" accept="image/*">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+{% endblock content %}

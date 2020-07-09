@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    
+    <body class="container" >
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3" >
+                <h1>Bread Quality Checker</h1>
+                <img src="{{ url_for('static', filename='temp.jpg')}}" style="display: block; margin: 0px auto;">
+                <div class="text">
+                    {% for result in response.payload %}
+                    {% if result.display_name == 'Correct' %}
+                    <h5>Great Job! This bread has been cooled correctly.</h5>
+                    {% else %}
+                    <h6>Oh no! Your bread hasn't been cooled properly!</h6>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
+
+{% endblock content %}

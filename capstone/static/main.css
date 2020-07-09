@@ -1,0 +1,48 @@
+*{
+    color: white;
+    background-color: #008938;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+h1{
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.text{
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.booth{
+    width:420px;
+    background-color: #ccc;
+    border: 10px solid #ddd;
+    margin: 0 auto;
+}
+
+.booth-capture-button{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+input{
+    background-color: white;
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 4px;
+}
+
+#canvas{
+    display: none;
+}
+
+
